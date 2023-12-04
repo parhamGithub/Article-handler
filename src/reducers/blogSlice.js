@@ -4,7 +4,12 @@ import {
     createSelector,
     createEntityAdapter,
 } from "@reduxjs/toolkit";
-import { createBlog, deleteBlog, getAllBlogs, updateBlog } from "../services/blogsServices"
+import {
+    createBlog,
+    deleteBlog,
+    getAllBlogs,
+    updateBlog
+} from "../services/blogsServices";
 
 const blogAdaptor = createEntityAdapter({
     sortComparer: (a, b) => b.date.localeCompare(a.date),
